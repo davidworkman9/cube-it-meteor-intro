@@ -18,5 +18,23 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
+
 accounts-password
-accounts-ui
+kadira:flow-router
+useraccounts:materialize
+materialize:materialize
+kadira:blaze-layout
+useraccounts:flow-routing
+
+service-configuration
+fortawesome:fontawesome
+zimme:active-route
+logging
+reload
+random
+ejson
+spacebars
+check
+arillo:flow-router-helpers
+
+sacha:spin

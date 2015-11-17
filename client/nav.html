@@ -1,0 +1,15 @@
+<template name="nav">
+  <nav class="teal darken-4">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+        </a>
+        <ul id="side-nav" class="side-nav">
+          <li class="{{isActiveRoute regex='home'}}"><a href="{{pathFor 'home'}}">Home</a></li>
+          <li>{{> atNavButton }}</li>
+        </ul>
+        <a class="button-collapse show-on-large" href="#" data-activates="side-nav"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </nav>
+</template>
