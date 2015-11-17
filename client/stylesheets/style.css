@@ -33,6 +33,10 @@ footer {
   padding-left: 0;
 }
 
+.brand-logo {
+  margin-left: 15px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
