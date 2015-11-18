@@ -1,0 +1,35 @@
+<template name="chatroom">
+  {{> chatMessages roomId=roomId}}
+  {{> messageForm}}
+  {{#unless Template.subscriptionsReady}}
+    {{> loading}}
+  {{/unless}}
+</template>
+
+<template name="chatMessages">
+  <ul class="collection" style="padding-bottom: 80px;">
+    {{#each messages}}
+      <li class="collection-item avatar">
+        <img alt="" class="circle green">
+        <span class="title">{{message}}</span>
+        <p>
+          <small>{{getUserEmail}}</small>
+        </p>
+      </li>
+    {{/each}}
+  </ul>
+
+</template>
+
+<template name="messageForm">
+  <div id="chat-message-form" class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Message</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

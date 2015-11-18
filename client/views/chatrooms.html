@@ -1,0 +1,26 @@
+<template name="chatrooms">
+  {{> chatroomsList}}
+  {{> newChatroomButton}}
+  {{#unless Template.subscriptionsReady}}
+    {{> loading}}
+  {{/unless}}
+</template>
+
+<template name="newChatroomButton">
+  <a href="/chatrooms/add"
+     class="btn-floating btn-large waves-effect waves-light red"
+     style="bottom: 20px; right: 20px; position: fixed;">
+    <i class="fa fa-plus"></i></a>
+</template>
+
+<template name="chatroomsList">
+  <ul class="collection">
+    {{#each chatrooms}}
+      <a href="/chatrooms/{{_id}}" class="collection-item">
+        <h5>{{name}}</h5>
+        <p>{{description}}</p>
+      </a>
+    {{/each}}
+  </ul>
+</template>
+
